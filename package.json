@@ -1,0 +1,34 @@
+{
+  "name": "boundary-cells",
+  "version": "0.0.0",
+  "description": "Enumerates all boundary cells in a simplicial complex",
+  "main": "boundary.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "simplicial-complex": "~0.3.0"
+  },
+  "devDependencies": {
+    "tap": "~0.4.0"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/boundary-cells.git"
+  },
+  "keywords": [
+    "boundary",
+    "cell",
+    "simplicial",
+    "complex",
+    "mesh",
+    "topology"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "1d6b36821108ed468a8d667e2f498b73ae1a50b3"
+}
