@@ -3,16 +3,22 @@
 var top = require("simplicial-complex")
 
 function boundary(cells) {
-  var result = []
-  for(var i=0, ilen=cells.length; i<ilen; ++i) {
-    var c = cells[i]
-    for(var j=0, jlen=c.length; j<jlen; ++j) {
-      var t = c.slice(0)
-      t.splice(j,1)
-      result.push(t)
+  var bnd = top.boundary(cells)
+  var ptr = 0
+  for(var i=0,ilen=bnd.length; i<ilen; ) {
+    var j
+    for(j=i+1; j<ilen; ++j) {
+      if(top.compareCells(bnd[i], bnd[j])) {
+        break
+      }
     }
+    if((j-i)%2) {
+      bnd[ptr++] = bnd[i]
+    }
+    i = j
   }
-  return top.unique(top.normalize(result))
+  bnd.length = ptr
+  return bnd
 }
 
 module.exports = boundary

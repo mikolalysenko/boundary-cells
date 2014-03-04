@@ -1,13 +1,13 @@
 {
   "name": "boundary-cells",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Enumerates all boundary cells in a simplicial complex",
   "main": "boundary.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "simplicial-complex": "~0.3.0"
+    "simplicial-complex": "^0.3.3"
   },
   "devDependencies": {
     "tap": "~0.4.0"
